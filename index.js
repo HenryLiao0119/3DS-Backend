@@ -19,13 +19,13 @@ import { notFound, errorHandler } from './middleware/errorMiddleware.js';
 // ------------------------------------------------------
 
 //set up enviroment files
-dotenv.config();
+//dotenv.config();
 
 // initialized the server
 const app = express();
 
 // initialized DB
-connectDB();
+//connectDB();
 
 // allow us to accept json body for auth
 app.use(express.json());
