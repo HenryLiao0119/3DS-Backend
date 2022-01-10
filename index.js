@@ -34,24 +34,24 @@ app.get('/', (req, res) => {
   res.send('API is running....');
 });
 
-// Routes
-app.use('/api/products', productRoutes);
-app.use('/api/users', userRoutes);
-app.use('/api/orders', orderRoutes);
-app.use('/api/upload', uploadRoutes);
+// // Routes
+// app.use('/api/products', productRoutes);
+// app.use('/api/users', userRoutes);
+// app.use('/api/orders', orderRoutes);
+// app.use('/api/upload', uploadRoutes);
 
-// paypal route
-app.get('/api/config/paypal', (req, res) => {
-  res.send(process.env.PAYPAL_CLIENT_ID);
-});
+// // paypal route
+// app.get('/api/config/paypal', (req, res) => {
+//   res.send(process.env.PAYPAL_CLIENT_ID);
+// });
 
-// making a folder static for uploads
-const __dirname = path.resolve();
-app.use('/uploads', express.static(path.join(__dirname, '/uploads')));
+// // making a folder static for uploads
+// const __dirname = path.resolve();
+// app.use('/uploads', express.static(path.join(__dirname, '/uploads')));
 
-// error route need to be at the end
-app.use(notFound);
-app.use(errorHandler);
+// // error route need to be at the end
+// app.use(notFound);
+// app.use(errorHandler);
 
 // set port
 const PORT = process.env.PORT || 5000;
